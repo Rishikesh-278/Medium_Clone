@@ -46,10 +46,6 @@ class Account extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text(
-                          "View stats",
-                          style: TextStyle(color: Colors.white),
-                        ),
                         style: ElevatedButton.styleFrom(
                             fixedSize: Size.fromHeight(40),
                             elevation: 0,
@@ -57,23 +53,27 @@ class Account extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(50)),
                             backgroundColor: Colors.transparent,
                             side: const BorderSide(color: Colors.white, width: 1)),
+                        child: const Text(
+                          "View stats",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ), //View stats button
                     const SizedBox(width: 20),
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text(
-                          "Edit profile",
-                          style: TextStyle(color: Colors.white),
-                        ),
                         style: ElevatedButton.styleFrom(
-                            fixedSize: Size.fromHeight(40),
+                            fixedSize: const Size.fromHeight(40),
                             elevation: 0,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
                             backgroundColor: Colors.transparent,
-                            side: BorderSide(color: Colors.white, width: 1)),
+                            side: const BorderSide(color: Colors.white, width: 1)),
+                        child: const Text(
+                          "Edit profile",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ), //Edit profile button
                     const SizedBox(width: 15),
@@ -86,7 +86,7 @@ class Account extends StatelessWidget {
               Tab(text: "List"),
               Tab(text: "About")
             ]),
-            const TabBarView(children: [
+            TabBarView(children: [
               stories(),
               list(),
               about(),
